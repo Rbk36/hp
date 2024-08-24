@@ -1,0 +1,6 @@
+fig, axs = plt.subplots(nrows=1, ncols=2, 
+                        figsize=(7, 3),
+                        gridspec_kw={
+                            "width_ratios": [0.5, 0.5],
+                            "wspace": 0.25
+                        })

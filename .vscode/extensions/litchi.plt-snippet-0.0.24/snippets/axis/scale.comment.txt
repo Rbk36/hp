@@ -1,0 +1,2 @@
+# "log"为对数坐标轴，"linear"为线型坐标轴 
+ax.set_yscale("log")

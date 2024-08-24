@@ -1,0 +1,9 @@
+from matplotlib import font_manager
+
+font_path = 'path_to_font'                      # 此处为字体的路径
+font_manager.fontManager.addfont(font_path)
+prop = font_manager.FontProperties(fname=font_path)
+
+plt.rcParams['font.family'] = prop.get_name()
+plt.rcParams['mathtext.fontset'] = 'stix' # 'stix' | 'cm'
+plt.rcParams['font.size'] = 10

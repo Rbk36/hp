@@ -1,0 +1,12 @@
+# 引入字体管理模块
+from matplotlib import font_manager
+
+# 加载本地字体（ttf格式）
+font_path = 'path_to_font'   
+font_manager.fontManager.addfont(font_path)
+prop = font_manager.FontProperties(fname=font_path)
+
+# 设置字体、字号
+plt.rcParams['font.family'] = prop.get_name()
+plt.rcParams['mathtext.fontset'] = 'stix'       # 解决负号兼容问题
+plt.rcParams['font.size'] = 10

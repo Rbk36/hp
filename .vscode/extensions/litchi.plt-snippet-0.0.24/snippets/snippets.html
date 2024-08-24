@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snippet</title>
+    <link rel="stylesheet" href="./vscode.css">
+</head>
+
+<body>
+    <button id="import" title="导入numpy, matplotlib" style="width: 48%;" dir=".">导入包</button>
+    <button id="font" title="设置本地字体" style="width: 48%;" dir=".">字体</button>
+
+    <h4 style="text-align: center;">加载数据</h4>
+    <button id="loadtxt" title="加载文本数据" style="width: 48%;" dir="load_data">csv|txt</button>
+    <button id="load" title="加载npy格式文件" style="width: 48%;" dir="load_data">numpy</button>
+
+    <h4 style="text-align: center;">绘图</h4>
+    <button id="plot" title="创建简单折线图，一条线的数据最好≥6个" style="width: 48%;" dir="pyplot">折线</button>
+    <button id="bar" title="创建柱状图、条形图，适合数据较少情况" style="width: 48%;" dir="pyplot">柱状</button>
+    <button id="scatter" title="创建散点图，输入两个等长的数组" style="width: 48%;" dir="pyplot">散点</button>
+    <button id="imshow" title="imshow函数，也可用于热度图，要求输入一个二维数组" style="width: 48%;" dir="pyplot">矩阵</button>
+    <button id="errorbar" title="带有误差信息的折线图，支持上下误差不同" style="width: 48%;" dir="pyplot">误差折</button>
+    <button id="pie" title="展示数据中各成分的比例" style="width: 48%;" dir="pyplot">饼图</button>
+    <button id="hist" title="直方统计图" style="width: 48%;" dir="pyplot">直方</button>
+    <button id="boxplot" title="用于可视化多组数据分布情况" style="width: 48%;" dir="pyplot">箱型</button>
+
+    <h4 style="text-align: center;">轴与标签</h4>
+    <button id="lim" title="手动设置X/Y轴的上下限" style="width: 48%;" dir="axis">轴范围</button>
+    <button id="label" title="设置X/Y轴的标签" style="width: 48%;" dir="axis">轴标签</button>
+    <button id="ticks" title="设置X/Y轴的刻度出现在的位置" style="width: 48%;" dir="axis">轴刻度</button>
+    <button id="ticklabels" title="设置X/Y轴的刻度标签" style="width: 48%;" dir="axis">刻度标</button>
+    <button id="aspect" title="设置Y/X轴比例" style="width: 48%;" dir="axis">轴比例</button>
+    <button id="scale" title="设置轴刻度的分布，常用为线性-linear、指数-log" style="width: 48%;" dir="axis">轴分布</button>
+
+    <h4 style="text-align: center;">其它常用</h4>
+    <button id="savefig" title="保存图片，后缀支持 png,jpg,pdf,eps等" style="width: 48%;" dir="other">保存</button>
+    <button id="style" title="使用不同的样式表，通过`plt.style.available`查看可用风格" style="width: 48%;" dir="other">风格</button>
+    <button id="legend" title="添加图例" style="width: 48%;" dir="other">图例</button>
+    <button id="text" title="添加文本信息" style="width: 48%;" dir="other">文本</button>
+    <button id="annotate" title="添加注释，相当于 文本+箭头" style="width: 48%;" dir="other">注解</button>
+    <button id="3daxes" title="创建3D坐标系" style="width: 48%;" dir="other">3D坐标</button>
+    <button id="fill_between" title="在指定范围内填充颜色" style="width: 48%;" dir="other">区间填充</button>
+    <button id="axvspan" title="在一段区间内设置背景颜色" style="width: 48%;" dir="other">方块填充</button>
+    <button id="subplots" title="同一个图中并存多个坐标系" style="width: 48%;" dir="other">多图布局</button>
+    <button id="grid" title="添加背景网格" style="width: 48%;" dir="other">背景网格</button>
+
+    <div id="colorWrapper" style="display: flex; align-items: center;">
+        <div id="colorValue" onclick="copyColorValue()"
+            style="text-align: center; margin-right: 2px; width: 80%; text-overflow: ellipsis; white-space: nowrap;">
+            #0e639c</div>
+        <input id="color" title="获取指定颜色的十六进制颜色表示" name="color" style="height: 32px; aspect-ratio: 1;" type="color"
+            value="#0e639c" />
+    </div>
+
+
+    <h4 style="text-align: center;">其它工具</h4>
+    <button id="tools" title="查看颜色-color、标识符-marker、线型-linestyle、cmp等常见概念" style="width: 100%;">常见概念</button>
+    <button id="template" title="打开notebook模板视图，点击按钮在本地生成" style="width: 100%;">绘图模板</button>
+    <button id="customTemplate" title="打开自定模板网页视图" style="width: 100%;">自定义模板</button>
+    <!-- <button id="tutorial" title="教程视频链接" style="width: 100%;">演示视频</button> -->
+    <script src="./snippets.js"></script>
+</body>
+
+</html>

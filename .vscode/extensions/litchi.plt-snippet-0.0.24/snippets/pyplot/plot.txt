@@ -1,0 +1,7 @@
+fig, ax = plt.subplots(figsize=(3.5, 3))
+
+_ = ax.plot(x, y, 'rs-', label='label')
+_ = ax.legend(frameon=False, loc=0, title='')
+
+ax.set_xlabel("x/unit")
+ax.set_ylabel("y/unit")

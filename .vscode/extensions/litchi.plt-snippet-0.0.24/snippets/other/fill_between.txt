@@ -1,0 +1,1 @@
+_ = ax.fill_between(x, 0, y, alpha=0.5)

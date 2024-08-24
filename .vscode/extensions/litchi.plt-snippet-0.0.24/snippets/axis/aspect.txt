@@ -1,0 +1,2 @@
+# aspect = dy/dx
+ax.set_aspect(aspect = 0.5)

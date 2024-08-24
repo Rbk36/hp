@@ -1,0 +1,2 @@
+ax.set_xlim([x_min, x_max])
+ax.set_ylim([y_min, y_max])

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自定义模板</title>
+<style>
+    h2 {
+        text-align: center; /* 文本居中 */
+        width: 100vw; /* 设置宽度为视口宽度的100%，使得h2元素全宽 */
+        margin: 0; /* 清除默认的外边距，可根据需要调整上下的外边距 */
+        background-color: var(--vscode-button-background);
+        color: var(--vscode-button-foreground);
+    }
+    img {
+        border: 2px solid var(--vscode-button-background); /* 设置边框宽度、样式和颜色 */
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .box {
+        width: 240px;
+        height: 240px;
+        margin: 10px;
+        text-align: center;
+    }
+    button {
+        border: none;
+        margin-top: 2px;
+        padding: var(--input-padding-vertical) var(--input-padding-horizontal);
+        width: 80%;
+        text-align: center;
+        outline: 1px solid transparent;
+        outline-offset: 2px !important;
+        color: var(--vscode-button-foreground);
+        background: var(--vscode-button-background);
+        font-size: 16px;
+    }
+    
+    button:hover {
+        cursor: pointer;
+        background: var(--vscode-button-hoverBackground);
+    }
+    
+    button:focus {
+        outline-color: var(--vscode-focusBorder);
+    }
+    
+    button.secondary {
+        color: var(--vscode-button-secondaryForeground);
+        background: var(--vscode-button-secondaryBackground);
+    }
+    
+    button.secondary:hover {
+        background: var(--vscode-button-secondaryHoverBackground);
+    }
+
+    .box img {
+        width: 100%;
+        height: 80%;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+<h2>第一组</h2>
+<div class="box">
+<img src="cover/a.png" alt="item-a">
+<button id="a" data-ipynbpath="D:\vscode_plugin\plt-snippet\customTemplate\ipynb\a.ipynb">item-a</button>
+</div>
+<div class="box">
+<img src="cover/b.png" alt="item-b">
+<button id="b" data-ipynbpath="D:\vscode_plugin\plt-snippet\customTemplate\ipynb\b.ipynb">item-b</button>
+</div>
+<h2>第二组</h2>
+<div class="box">
+<img src="cover/c.png" alt="item-c">
+<button id="c" data-ipynbpath="D:\vscode_plugin\plt-snippet\customTemplate\ipynb\c.ipynb">item-c</button>
+</div>
+<div class="box">
+<img src="cover/a.png" alt="item-d">
+<button id="d" data-ipynbpath="D:\vscode_plugin\plt-snippet\customTemplate\ipynb\d.ipynb">item-d</button>
+</div>
+</div>
+<script>
+    const vscode = acquireVsCodeApi();
+
+    const buttons = document.querySelectorAll('button');
+    
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            vscode.postMessage({
+                "id": this.id,
+                "ipynbpath": this.dataset.ipynbpath
+            });
+        });
+    });
+</script>
+</body>
+</html>
+    

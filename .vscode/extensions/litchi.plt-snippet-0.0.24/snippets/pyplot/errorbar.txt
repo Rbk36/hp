@@ -1,0 +1,10 @@
+fig, ax = plt.subplots(figsize=(3.5,3))  
+
+ax.errorbar(x, y, yerr, 
+    ls=':',  c='orangered', marker='s', 
+    capsize=4, capthick=2, ecolor='k', 
+    alpha=0.75, label='y data')
+
+ax.legend(frameon=False, loc=0)
+ax.set_xlabel('x / m')
+ax.set_ylabel(r'y and f', labelpad=-6, y=0.5)

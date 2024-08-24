@@ -1,0 +1,10 @@
+fig, ax = plt.subplots(figsize=(3.5, 3))
+
+# bar_labels是一个字符串列表，bar_values是一个与bar_labels等长的数字列表
+bars = ax.bar(bar_labels, bar_values, color='salmon')
+
+# 为条形添加数字标签
+ax.bar_label(bars, padding=3)
+
+ax.set_xlabel("x/unit")
+ax.set_ylabel("y/unit")

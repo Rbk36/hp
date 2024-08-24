@@ -1,0 +1,2 @@
+# axis='y'|'x'|'both'
+ax.grid(True, axis='y', lw=2, ls='--', color='gray', alpha=0.6)

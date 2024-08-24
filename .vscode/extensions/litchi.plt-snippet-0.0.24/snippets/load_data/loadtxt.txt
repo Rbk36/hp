@@ -1,0 +1,1 @@
+data = np.loadtxt(fname=r'./data.csv', dtype=float, skiprows=1, delimiter=',')

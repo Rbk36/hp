@@ -1,0 +1,3 @@
+# 保存图片 
+plt.savefig('filename.png', dpi=300, bbox_inches='tight', transparent=False)
+plt.savefig('filename.eps', bbox_inches='tight', transparent=False)

@@ -1,0 +1,7 @@
+fig, ax = plt.subplots(figsize=(3.5, 3))
+
+_ = ax.scatter(x, y, color='salmon', s=24, label='label')
+_ = ax.legend(frameon=False, loc=0, title='')
+
+ax.set_xlabel("x/unit")
+ax.set_ylabel("y/unit")

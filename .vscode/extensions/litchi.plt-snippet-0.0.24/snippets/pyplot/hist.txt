@@ -1,0 +1,12 @@
+fig, ax = plt.subplots(figsize=(3.5, 3))
+
+# data1, data2是一维数字列表，且通常长度>1000
+_ = ax.hist(data1, bins=32, density=True, alpha=0.75, label="data 1")
+_ = ax.hist(data2, bins=32, density=True, alpha=0.75, label="data 2")
+
+ax.set_xlabel("x/unit")
+ax.set_ylabel("density")
+
+_ = ax.legend(frameon=False, loc=0, title='')
+
+plt.show()

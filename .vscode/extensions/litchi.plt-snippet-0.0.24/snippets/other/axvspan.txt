@@ -1,0 +1,2 @@
+ax.axhspan(0.7, 0.9, color='lightgray', alpha=0.8)
+ax.hlines([0.7,0.9], xmin=0, xmax=0.5, lw=1, color='k', alpha=0.8)

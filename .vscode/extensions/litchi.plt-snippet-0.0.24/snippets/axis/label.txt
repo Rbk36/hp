@@ -1,0 +1,2 @@
+ax.set_xlabel("X / unit", x=0.5, labelpad=-2, rotation=0)
+ax.set_ylabel("Y / unit", y=0.5, labelpad=2)

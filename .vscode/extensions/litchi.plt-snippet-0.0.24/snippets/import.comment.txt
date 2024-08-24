@@ -1,0 +1,7 @@
+# 导入 matplotlib 和 numpy 包 
+import matplotlib.pyplot as plt 
+import numpy as np
+
+# 设置刻度方向向内
+plt.rcParams['xtick.direction'] = 'in'
+plt.rcParams['ytick.direction'] = 'in'

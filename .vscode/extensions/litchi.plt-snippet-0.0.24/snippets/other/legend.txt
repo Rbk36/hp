@@ -1,0 +1,4 @@
+ax.legend(frameon=false, fontsize=10,
+           ncols=2,  columnspacing=1.5,
+           handlelength=2.0, handletextpad=0.2,
+           loc=3, bbox_to_anchor=(0.32,0.72))

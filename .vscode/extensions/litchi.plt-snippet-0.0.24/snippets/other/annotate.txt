@@ -1,0 +1,6 @@
+ax.annotate('-|>', xy=(0.1, 0.7), xytext=(0.6, 0.8),
+            arrowprops={
+                "arrowstyle": '-|>',
+                "linewidth":2,
+                "facecolor": 'k',
+            })
